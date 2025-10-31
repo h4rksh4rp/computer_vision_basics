@@ -2,7 +2,7 @@ site_name: Computer Vision Basics
 site_description: "Proyek latihan Computer Vision oleh Hendra"
 site_author: Hendra
 theme:
-  name: material
+  name: readthedocs
   features:
     - navigation.sections
     - navigation.expand
