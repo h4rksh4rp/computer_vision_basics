@@ -11,9 +11,11 @@ theme:
 nav:
   - Home: index.md
   - Getting Started:
-      - Tutorial: tutorial.md
-      - Adding Project: adding_project.md
-      - Tools: tools.md
+      - Setting SVM: setting-svm.md
+      - Setting WSL: wsl-setting.md
+      - Install Miniconda: miniconda-install.md
+      - Standar Foldering: foldering.md
+      - Setting Doc: documentasi-publik.md
   - Project Setup and Configuration:
       - Configuration Overview: config_overview.md
       - Authentication: auth_methods.md
@@ -35,4 +37,4 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/username/repo
-site_name: My Docs
+site_name: Jurnaling Progress
