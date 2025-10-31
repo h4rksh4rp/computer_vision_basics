@@ -1,13 +1,19 @@
 site_name: Computer Vision Basics
 site_description: "Proyek latihan Computer Vision oleh Hendra"
 site_author: Hendra
+
+# TEMA DIRUBAH KE MATERIAL AGAR FITUR DI BAWAHNYA BERFUNGSI
 theme:
-  name: readthedocs
+  name: material
   features:
     - navigation.sections
     - navigation.expand
     - navigation.top
     - toc.integrate
+    # Fitur MkDocs Material lain yang berguna:
+    - search.suggest
+    - search.highlight
+
 nav:
   - Home: index.md
   - Getting Started:
@@ -24,17 +30,20 @@ nav:
       - Git Integration: git_integration.md
   - Hosting Documentation:
       - Overview: hosting.md
+
 markdown_extensions:
   - admonition
   - pymdownx.superfences
   - toc:
       permalink: true
+
 extra_css:
+  # Pastikan file ini ada di docs/stylesheets/custom.css
   - stylesheets/custom.css
+
 extra:
   version:
     provider: git
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/username/repo
-site_name: Jurnaling Progress

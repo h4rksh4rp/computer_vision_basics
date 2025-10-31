@@ -1,3 +1,4 @@
 mkdocs
 mkdocs-material
+mkdocs-bootstrap
 # jika butuh plugin lain, tambahkan di sini
