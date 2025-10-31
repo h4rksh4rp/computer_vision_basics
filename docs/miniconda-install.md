@@ -73,46 +73,46 @@ A. Buat File Python
 nano quick_train.py
 B. Tempel Script Berikut ke Nano
 Tempelkan kode ini ke editor nano Anda:
-import torch
-import torchvision
-from torchvision import datasets, transforms
-
-#Cek apakah CUDA tersedia
-device = torch.device("cuda" if torch.cuda_is_available() else "cpu")
-print("Device yang digunakan:", device)
-
-#Download dataset MNIST
-transform = transforms.Compose([transforms.ToTensor()])
-train_data = datasets.MNIST(root="data", train=True, download=True, transform=transform)
-
-#Buat DataLoader
-train_loader = torch.utils.data.DataLoader(train_data, batch_size=64, shuffle=True)
-
-#Buat model sederhana
-model = torch.nn.Sequential(
-    torch.nn.Flatten(),
-    torch.nn.Linear(28 * 28, 128),
-    torch.nn.ReLU(),
-    torch.nn.Linear(128, 10)
-).to(device)
-
-optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
-loss_fn = torch.nn.CrossEntropyLoss()
-
-#Satu epoch training sederhana
-for batch_idx, (X, y) in enumerate(train_loader):
-    X, y = X.to(device), y.to(device)
-    pred = model(X)
-    loss = loss_fn(pred, y)
-
-    optimizer.zero_grad()
-    loss.backward()
-    optimizer.step()
-
-    if batch_idx % 100 == 0:
-        print(f"Batch {batch_idx}, Loss: {loss.item():.4f}")
-
-print("Training selesai.")
+        import torch
+        import torchvision
+        from torchvision import datasets, transforms
+        
+        #Cek apakah CUDA tersedia
+        device = torch.device("cuda" if torch.cuda_is_available() else "cpu")
+        print("Device yang digunakan:", device)
+        
+        #Download dataset MNIST
+        transform = transforms.Compose([transforms.ToTensor()])
+        train_data = datasets.MNIST(root="data", train=True, download=True, transform=transform)
+        
+        #Buat DataLoader
+        train_loader = torch.utils.data.DataLoader(train_data, batch_size=64, shuffle=True)
+        
+        #Buat model sederhana
+        model = torch.nn.Sequential(
+            torch.nn.Flatten(),
+            torch.nn.Linear(28 * 28, 128),
+            torch.nn.ReLU(),
+            torch.nn.Linear(128, 10)
+        ).to(device)
+        
+        optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+        loss_fn = torch.nn.CrossEntropyLoss()
+        
+        #Satu epoch training sederhana
+        for batch_idx, (X, y) in enumerate(train_loader):
+            X, y = X.to(device), y.to(device)
+            pred = model(X)
+            loss = loss_fn(pred, y)
+        
+            optimizer.zero_grad()
+            loss.backward()
+            optimizer.step()
+        
+            if batch_idx % 100 == 0:
+                print(f"Batch {batch_idx}, Loss: {loss.item():.4f}")
+        
+        print("Training selesai.")
 
 
 C. Simpan dan Keluar
