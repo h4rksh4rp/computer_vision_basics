@@ -3,13 +3,36 @@ site_description: "Proyek latihan Computer Vision oleh Hendra"
 site_author: Hendra
 theme:
   name: material
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - toc.integrate
 nav:
   - Home: index.md
-  - Installation: installation.md
-  - Usage: usage.md
+  - Getting Started:
+      - Tutorial: tutorial.md
+      - Adding Project: adding_project.md
+      - Tools: tools.md
+  - Project Setup and Configuration:
+      - Configuration Overview: config_overview.md
+      - Authentication: auth_methods.md
+  - Build Process:
+      - Overview: build_overview.md
+      - Git Integration: git_integration.md
+  - Hosting Documentation:
+      - Overview: hosting.md
 markdown_extensions:
   - admonition
   - pymdownx.superfences
   - toc:
       permalink: true
+extra_css:
+  - stylesheets/custom.css
+extra:
+  version:
+    provider: git
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/username/repo
 site_name: My Docs
