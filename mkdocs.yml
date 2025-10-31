@@ -1,0 +1,15 @@
+site_name: Computer Vision Basics
+site_description: "Proyek latihan Computer Vision oleh Hendra"
+site_author: Hendra
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Usage: usage.md
+markdown_extensions:
+  - admonition
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+site_name: My Docs
