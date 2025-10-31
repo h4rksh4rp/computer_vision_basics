@@ -1,1 +1,1 @@
-[![Documentation Status](https://readthedocs.org/projects/<your-project>/badge/?version=latest)](https://your-project.readthedocs.io/en/latest/)
+[![Documentation Status][(https://readthedocs.org/projects/<your-project>/badge/?version=latest)](https://your-project.readthedocs.io/en/latest/)](https://computer-vision-basics.readthedocs.io/en/latest/)
